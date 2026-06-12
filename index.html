@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sentinel AI — Security Operations Platform</title>
+  <meta name="description" content="Sentinel AI — AI-powered SOC platform with threat detection, MITRE ATT&CK mapping, patch management, and automated incident response."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar" style="display:none;">
+    <div class="sidebar-brand">
+      <div class="brand-icon">🛡️</div>
+      <div>
+        <div class="brand-name">Sentinel AI</div>
+        <div class="brand-sub">SOC · Threat · Patch</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">OVERVIEW</div>
+      <a href="#" class="nav-item" data-perm="view" onclick="showPage('dashboard')">
+        <span class="nav-icon">📊</span> SOC Dashboard
+      </a>
+
+      <div class="nav-section-label">AI MODULES</div>
+      <a href="#" class="nav-item" data-perm="copilot" onclick="showPage('copilot')">
+        <span class="nav-icon">🤖</span> AI Copilot
+      </a>
+      <a href="#" class="nav-item" data-perm="threat_intel" onclick="showPage('threat')">
+        <span class="nav-icon">🌐</span> Threat Intelligence
+      </a>
+      <a href="#" class="nav-item" data-perm="threat_intel" onclick="showPage('mitre')">
+        <span class="nav-icon">🗡️</span> MITRE ATT&amp;CK
+      </a>
+
+      <div class="nav-section-label">PATCH OPS</div>
+      <a href="#" class="nav-item" data-perm="view" onclick="showPage('patch')">
+        <span class="nav-icon">🔧</span> Patch Management
+      </a>
+      <a href="#" class="nav-item disabled">
+        <span class="nav-icon">🔍</span> Vulnerability Mgmt
+      </a>
+      <a href="#" class="nav-item disabled">
+        <span class="nav-icon">⚙️</span> Config Management
+      </a>
+      <a href="#" class="nav-item disabled">
+        <span class="nav-icon">🚨</span> Incident Response
+      </a>
+
+      <div class="nav-section-label">REPORTS</div>
+      <a href="#" class="nav-item" data-perm="view" onclick="showPage('reports')">
+        <span class="nav-icon">📋</span> Reports
+      </a>
+      <a href="#" class="nav-item disabled">
+        <span class="nav-icon">📈</span> Analytics
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="user-avatar">KS</div>
+        <div>
+          <div class="user-name">Kishore S.</div>
+          <div class="user-role">Authenticating…</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content" id="mainContent" style="display:none;">
+    <!-- Pages injected by JS -->
+  </main>
+
+  <!-- Scripts — load order matters -->
+  <script src="db.js"></script>
+  <script src="auth.js"></script>
+  <script src="ml.js"></script>
+  <script src="copilot.js"></script>
+  <script src="threat.js"></script>
+  <script src="patch.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
